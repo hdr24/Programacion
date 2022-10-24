@@ -2,7 +2,7 @@ package Ejercicios05;
 
 import java.util.Scanner;
 
-public class Ejercicio23 {
+public class Ejercicio32 {
     public static void main(String[] args) {
         int num, total = 0, cont = 0;
         boolean entrada = true;
@@ -19,6 +19,6 @@ public class Ejercicio23 {
         }
         System.out.println("El total acumulado es " + total);
         System.out.println("Ha introducido " + cont + " números");
-        System.out.println("La media de los números introducidos es " + total / cont);
+        System.out.println("La media de los números introducidos es " + total/cont);
     }
 }

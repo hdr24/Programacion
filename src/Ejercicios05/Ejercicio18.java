@@ -4,43 +4,28 @@ import java.util.Scanner;
 
 public class Ejercicio18 {
     public static void main(String[] args) {
-
-        int filas;
-        String caracter;
+        int num1, num2;
         Scanner s = new Scanner(System.in);
-        System.out.println("Introduzca un número ");
-        filas = s.nextInt();
-        System.out.println("Introduzca un carácter");
-        caracter = s.next();
-
-
-        for (int i = 1; i <= filas; ++i) {
-
-            // reasignamos la variable j a 0 en cada vuelta
-
-            int j = 0;
-
-            // El numero de espacios antes del número lo calculamos restando el numero de la fila actual
-            // al número de filas total
-
-            for (int espacios = 1; espacios <= filas - i; ++espacios) {
-                System.out.print("  ");
+        System.out.println("Introduzca el primer número");
+        num1 = s.nextInt();
+        System.out.println("Introduzca el segundo número");
+        num2 = s.nextInt();
+        if (num1 != num2) {
+            if (num1 < num2) {
+                System.out.println("Los numeros comprendidos entre " + num1 + " y " + num2 + " de 7 en 7 son:");
+                while (num2 >= num1) {
+                    System.out.println(num1);
+                    num1 += 7;
+                }
+            } else {
+                System.out.println("Los numeros comprendidos entre " + num2 + " y " + num1 + " de 7 en 7 son:");
+                while (num1 >= num2) {
+                    System.out.println(num2);
+                    num2 += 7;
+                }
             }
-
-            /*
-            Finalmente imprimimos el caracter y calculamos cuantas veces lo imprimimos
-            Mientras que j (las veces que se ha impreso el caracter) sea distinto al número de fila actual
-            por dos (para que sea una piramide completa) - 1 (para que el número sea impar y se alinee),
-            imprimiremos el caracter y un espacio para que se alinee
-             */
-
-
-            while (j != 2 * i - 1) {
-                System.out.print(caracter + " ");
-                ++j;
-            }
-
-            System.out.println();
+        } else {
+            System.out.println("Los números deben ser distintos");
         }
     }
 }

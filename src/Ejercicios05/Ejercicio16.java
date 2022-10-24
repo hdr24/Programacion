@@ -21,7 +21,7 @@ public class Ejercicio16 {
                 System.out.println(num + " es primo.");
             }
         } else {
-            System.out.println(num + " es primo.");
+            System.out.println(num + " no es primo.");
         }
     }
 }

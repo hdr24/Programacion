@@ -13,7 +13,6 @@ public class Ejercicio17 {
             for (int i = 0; i < 100; i++) {
             total = total + num;
             num++;
-                System.out.println(total);
             }
             System.out.println("La suma de los 100 siguientes números al número introducido es: " + total);
         } else {

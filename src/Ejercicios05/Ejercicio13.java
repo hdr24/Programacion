@@ -7,7 +7,7 @@ public class Ejercicio13 {
 
         int pos = 0, neg = 0, num;
         Scanner s = new Scanner(System.in);
-        System.out.println("Introduzca 10 numeros: ");
+        System.out.println("Introduzca 10 numeros separándolos con la tecla enter: ");
 
         for (int i = 0; i < 10; i++) {
             num = s.nextInt();

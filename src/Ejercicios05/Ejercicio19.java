@@ -1,0 +1,46 @@
+package Ejercicios05;
+
+import java.util.Scanner;
+
+public class Ejercicio19 {
+    public static void main(String[] args) {
+
+        int filas;
+        String caracter;
+        Scanner s = new Scanner(System.in);
+        System.out.println("Introduzca la altura: ");
+        filas = s.nextInt();
+        System.out.println("Introduzca un carácter: ");
+        caracter = s.next();
+
+
+        for (int i = 1; i <= filas; ++i) {
+
+            // reasignamos la variable j a 0 en cada vuelta
+
+            int j = 0;
+
+            // El numero de espacios antes del número lo calculamos restando el numero de la fila actual
+            // al número de filas total
+
+            for (int espacios = 1; espacios <= filas - i; ++espacios) {
+                System.out.print("  ");
+            }
+
+            /*
+            Finalmente imprimimos el caracter y calculamos cuantas veces lo imprimimos
+            Mientras que j (las veces que se ha impreso el caracter) sea distinto al número de fila actual
+            por dos (para que sea una piramide completa) - 1 (para que el número sea impar y se alinee),
+            imprimiremos el caracter y un espacio para que se alinee
+             */
+
+
+            while (j != 2 * i - 1) {
+                System.out.print(caracter + " ");
+                ++j;
+            }
+            // Imprimimos una línea vacía para saltar de línea
+            System.out.println();
+        }
+    }
+}

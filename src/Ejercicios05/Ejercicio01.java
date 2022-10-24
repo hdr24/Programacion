@@ -2,10 +2,8 @@ package Ejercicios05;
 
 public class Ejercicio01 {
     public static void main(String[] args) {
-        int i = 0;
-        while (i < 21) {
+        for (int i = 0; i < 21; i++) {
             System.out.println(5 * i);
-            i++;
         }
     }
 }
