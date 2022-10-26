@@ -4,21 +4,28 @@ import java.util.Scanner;
 
 public class Ejercicio32 {
     public static void main(String[] args) {
-        int num, total = 0, cont = 0;
-        boolean entrada = true;
+        int total = 0, digActual;
+        long num, numReves = 0;
         Scanner s = new Scanner(System.in);
-        System.out.println("Vaya introduciendo números hasta que su suma exceda 10000");
-        while (entrada) {
-            num = s.nextInt();
-            if ((total + num) >= 10000) {
-                entrada = false;
-            } else {
-                total += num;
-                cont++;
+        System.out.print("Introduzca un número entero positivo: ");
+        num = s.nextLong();
+
+        while (num != 0) {
+            numReves = numReves + (num % 10);
+            num = num / 10;
+            if (num != 0) {
+                numReves = numReves * 10;
             }
         }
-        System.out.println("El total acumulado es " + total);
-        System.out.println("Ha introducido " + cont + " números");
-        System.out.println("La media de los números introducidos es " + total/cont);
+        System.out.print("Los dígitos pares son: ");
+        while ( numReves != 0 ){
+            digActual = (int) (numReves % 10);
+            if (digActual % 2 == 0) {
+                System.out.print(digActual + " ");
+                total += digActual;
+            }
+            numReves /= 10;
+        }
+        System.out.println("\n" + "La suma de los digitos pares es: " + total);
     }
 }

@@ -33,14 +33,13 @@ public class Ejercicio20 {
 
                 if ((j == 0) || ( j == 2 * i - 2)) {
                     System.out.print(caracter + " ");
-                    ++j;
 
-                // Para una vuelta distinta a la primera o la última imprime un espacio para que sea hueca
+                    // Para una vuelta distinta a la primera o la última imprime un espacio para que sea hueca
 
                 } else {
                     System.out.print("  ");
-                    ++j;
                 }
+                ++j;
             }
 
             // Imprimimos una línea vacía para saltar de línea

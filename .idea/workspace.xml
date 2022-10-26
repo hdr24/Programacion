@@ -5,24 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe1a2af4-17e6-42b4-8a7f-f5e0c88175a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/hecto.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio19.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio20.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio24.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio27.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio29.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio30.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio32.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ejemplos/ArrayBi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio34.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ejercicios06/Ejercicio16.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio10.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio13.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio13.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio16.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio16.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio17.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio17.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio18.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio18.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio23.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio23.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio20.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio20.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio32.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicios05/Ejercicio32.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,15 +39,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Usuario/IdeaProjects/Programacion/src/Ejercicios05",
-    "settings.editor.selected.configurable": "Errors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Usuario/IdeaProjects/Programacion/src/Ejercicios05&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Usuario\IdeaProjects\Programacion\src\Ejercicios05" />
@@ -90,19 +79,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Ejercicios05/Ejercicio20.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Ejercicios05/Ejercicio32.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Ejercicios05/Ejercicio30.java</url>
           <line>6</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Ejercicios05/Ejercicio34.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
