@@ -10,6 +10,9 @@ public class Ejercicio07 {
         for (int i = 0; i < 100; i++) {
             numeros[i] = (int) (Math.random() * 21);
             System.out.print(numeros[i] + " ");
+            if (i % 25 == 0 && i != 0) {
+                System.out.println();
+            }
         }
         System.out.println("\nIntroduzca el valor que desea cambiar: ");
         valAnt = s.nextInt();
@@ -22,6 +25,9 @@ public class Ejercicio07 {
                 System.out.print("'" + numeros[i] + "'" + " ");
             } else {
                 System.out.print(numeros[i] + " ");
+            }
+            if (i % 25 == 0 && i != 0) {
+                System.out.println();
             }
         }
     }
