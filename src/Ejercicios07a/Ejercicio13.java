@@ -20,6 +20,7 @@ public class Ejercicio13 {
                 max = num[i];
             }
         }
+
         System.out.println("\n¿Qué desea destacar? (1 - mínimo, 2 - máximo)");
         select = s.nextInt();
         for (int i = 0; i < 100; i++) {

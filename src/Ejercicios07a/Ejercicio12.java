@@ -22,13 +22,16 @@ public class Ejercicio12 {
         for (int i = 0; i < 10; i++) {
             System.out.printf("%5s", numeros[i]);
         }
+
         System.out.print("\nIntroduzca la posicion inicial: ");
         posInic = s.nextInt();
         System.out.println("Introduzca la posición final: ");
         posFin = s.nextInt();
 
         if ((posInic < posFin) && (posFin >= 0 && posFin < 10) && (posInic >= 0)) {
+
             numerosFin[0] = numeros[9];
+
             for (int i = 1; i < 10; i++) {
                 if (i > posInic && i <= posFin) {
                     numerosFin[i] = numeros[i];

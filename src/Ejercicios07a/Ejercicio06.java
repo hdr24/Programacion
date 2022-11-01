@@ -12,7 +12,9 @@ public class Ejercicio06 {
             numeros[i] = s.nextInt();
         }
         numerosDesp[0] = numeros[14];
-        System.arraycopy(numeros, 0, numerosDesp, 1, 14);
+        for (int i = 1; i < 14; i++) {
+            numerosDesp[i] = numeros[i - 1];
+        }
 
         System.out.println("Los elementos del array desplazado son: ");
         for (int i = 0; i < 15; i++) {

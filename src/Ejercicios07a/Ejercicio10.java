@@ -14,10 +14,10 @@ public class Ejercicio10 {
 
         for (int i = 0; i < 20; i++) {
             if (num[i] % 2 == 0) {
-                System.arraycopy(num, i, numOrden, j, 1);
+                numOrden[j]= num[i];
                 j++;
             } else {
-                System.arraycopy(num, i, numOrden, k, 1);
+                numOrden[k] = num[i];
                 k--;
             }
         }

@@ -7,6 +7,7 @@ public class Ejercicio11 {
         int[] numInic = new int[10];
         int[] numFinal = new int[10];
         int k = 0;
+
         Scanner s = new Scanner(System.in);
         System.out.println("Introduzca 10 números");
         for (int i = 0; i < 10; i++) {
@@ -22,6 +23,7 @@ public class Ejercicio11 {
         for (int i = 0; i < 10; i++) {
             System.out.printf("%6d", numInic[i]);
         }
+
         for (int i = 0; i < 10; i++) {
             int div = 0;
             for (int j = 1; j <= numInic[i]; j++) {
@@ -30,7 +32,7 @@ public class Ejercicio11 {
                 }
             }
             if (div <= 2) {
-                System.arraycopy(numInic, i, numFinal, k, 1);
+                numFinal[k] = numInic[i];
                 k++;
             }
         }
@@ -43,7 +45,7 @@ public class Ejercicio11 {
                 }
             }
             if (!(div <= 2)) {
-                System.arraycopy(numInic, i, numFinal, k, 1);
+               numFinal[k] = numInic[i];
                 k++;
             }
         }

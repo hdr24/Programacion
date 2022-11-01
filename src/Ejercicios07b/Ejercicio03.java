@@ -10,7 +10,7 @@ public class Ejercicio03 {
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 5; j++) {
-                numeros[i][j] = (int) (Math.random() * 899) + 100;
+                numeros[i][j] = (int) (Math.random() * 900) + 100;
 
             }
         }
