@@ -7,6 +7,6 @@ public class Pruebas {
         Scanner s = new Scanner(System.in);
         int a = s.nextInt();
         int b = s.nextInt();
-        System.out.println(Ejercicio11.pegaPorDetras(a, b));
+        System.out.println(Ejercicio07.digitoN(a, b));
     }
 }
