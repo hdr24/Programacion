@@ -27,6 +27,5 @@ public class Pruebas {
         for (int j : array) {
             System.out.println(j);
         }
-
     }
 }
