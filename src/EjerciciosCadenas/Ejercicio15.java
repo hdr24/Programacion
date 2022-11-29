@@ -11,6 +11,6 @@ public class Ejercicio15 {
     }
 
     public static void main(String[] args) {
-        System.out.println(vecesCaracter("Unas cadenas", 's'));
+        System.out.println(vecesCaracter("Unas cadenas", 'a'));
     }
 }

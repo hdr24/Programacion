@@ -14,6 +14,6 @@ public class Ejercicio10 {
     }
 
     public static void main(String[] args) {
-        System.out.println(cuentaPalabras(""));
+        System.out.println(cuentaPalabras("  Una    cadena    de   caracteres   "));
     }
 }

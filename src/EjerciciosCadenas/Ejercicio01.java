@@ -11,6 +11,6 @@ public class Ejercicio01 {
     }
 
     public static void main(String[] args) {
-        System.out.println(numeroEspacios("frase  con espacios"));
+        System.out.println(numeroEspacios("  frasec onre spacios"));
     }
 }

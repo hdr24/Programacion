@@ -8,4 +8,14 @@ public class Ejercicio20 {
         }
         return array;
     }
+
+    public static void main(String[] args) {
+        int[] array = generaArrayInt(20, 1, 100);
+        for (int i = 0; i < 20; i++) {
+            System.out.print(array[i] + " ");
+        }
+
+        System.out.println("\n" + Ejercicio21.minimoArrayInt(array));
+        System.out.println(Ejercicio22.maximoArrayInt(array));
+    }
 }

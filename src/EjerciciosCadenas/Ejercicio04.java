@@ -10,6 +10,6 @@ public class Ejercicio04 {
     }
 
     public static void main(String[] args) {
-        System.out.println(contiene("Casa", 'f'));
+        System.out.println(contiene("Casa", 's'));
     }
 }
