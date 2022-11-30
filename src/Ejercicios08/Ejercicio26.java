@@ -10,4 +10,16 @@ public class Ejercicio26 {
         }
         return arrayVolt;
     }
+
+    public static void main(String[] args) {
+        int[] array = Ejercicio20.generaArrayInt(10,1, 10);
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+        array = volteaArrayInt(array);
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+    }
 }
