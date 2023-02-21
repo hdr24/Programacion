@@ -1,9 +1,9 @@
 package Ejercicios09.Ejercicio05;
 
 public class Pizza {
-    public String tipo, tamano;
-    public boolean servida;
-    public static int TotalPedidas, TotalServidas;
+    private String tipo, tamano;
+    private boolean servida;
+    private static int TotalPedidas, TotalServidas;
 
     Pizza(String tip, String tam) {
         tipo = tip;

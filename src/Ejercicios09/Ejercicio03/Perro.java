@@ -2,7 +2,7 @@ package Ejercicios09.Ejercicio03;
 
 public class Perro extends Mamifero {
 
-    private String raza;
+    private final String raza;
 
     Perro(Sexo s, String r) {
         super(s);

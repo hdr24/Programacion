@@ -12,7 +12,7 @@ public class Caballo {
     }
 
     void relincha() {
-        System.out.println("fffffff");
+        System.out.println("neigh");
     }
 
     void trota() {

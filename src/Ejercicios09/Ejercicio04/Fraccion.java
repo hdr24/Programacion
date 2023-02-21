@@ -1,11 +1,16 @@
 package Ejercicios09.Ejercicio04;
 
 public class Fraccion {
-    public int numerador, denominador;
+    private int numerador, denominador, signo;
 
     Fraccion(int n, int d) {
-        numerador = n;
-        denominador = d;
+        if ((n < 0 || d < 0) && !(n < 0 && d < 0)) {
+            signo = -1;
+        } else {
+            signo = 1;
+        }
+        numerador = Math.abs(n);
+        denominador = Math.abs(d);
     }
 
     public int getDenominador() {
@@ -16,18 +21,29 @@ public class Fraccion {
         return numerador;
     }
 
-    public void setDenominador(int denominador) {
-        this.denominador = denominador;
+    public void setDenominador(int den) {
+        this.denominador = den;
     }
 
-    public void setNumerador(int numerador) {
-        this.numerador = numerador;
+    public void setNumerador(int num) {
+        this.numerador = num;
     }
 
-    public void imprime() {
-        System.out.println(this.getNumerador());
-        System.out.println("——");
-        System.out.println(this.getDenominador());
+    public int getSigno() {
+        return signo;
+    }
+
+    public void setSigno(int sig) {
+        this.signo = sig;
+    }
+
+    public String toString() {
+        if (signo > 0) {
+            return this.numerador + "/" + this.denominador;
+        } else {
+            return "-" + this.numerador + "/" + this.denominador;
+        }
+
     }
 
     public void invierte() {
@@ -39,8 +55,9 @@ public class Fraccion {
     public void simplifica() {
         int mcd = 1;
         for (int i = 1; i <= this.numerador && i <= this.denominador; i++) {
-            if (this.denominador % i == 0 && this.numerador % i == 0)
+            if (this.denominador % i == 0 && this.numerador % i == 0) {
                 mcd = i;
+            }
         }
         this.denominador /= mcd;
         this.numerador /= mcd;
@@ -49,11 +66,17 @@ public class Fraccion {
     public void multiplica(Fraccion fr) {
         this.numerador *= fr.numerador;
         this.denominador *= fr.denominador;
+        if (this.signo == -1 && fr.signo == -1) {
+            this.signo = 1;
+        }
     }
 
     public void divide(Fraccion fr) {
         this.numerador *= fr.denominador;
         this.denominador *= fr.numerador;
+        if (this.signo == -1 && fr.signo == -1) {
+            this.signo = 1;
+        }
     }
 
 }

@@ -7,6 +7,13 @@ public abstract class Vehiculo {
     public int kilometrosRecorridos;
     public String color;
 
+    public Vehiculo(String col, int k) {
+        vehiculosCreados++;
+        color = col;
+        kilometrosRecorridos = k;
+        kilometrosTotales += k;
+    }
+
 
     public static int getVehiculosCreados() {
         return vehiculosCreados;
@@ -20,12 +27,7 @@ public abstract class Vehiculo {
         kilometrosRecorridos += k;
         kilometrosTotales += k;
     }
-    public Vehiculo(String col, int k) {
-        vehiculosCreados++;
-        color = col;
-        kilometrosRecorridos = k;
-        kilometrosTotales += k;
-    }
+
 
 
 }

@@ -14,4 +14,8 @@ public abstract class Mamifero extends Animal {
                 System.out.println("*da un paso*");
         }
     }
+
+    public void bebeLeche() {
+        System.out.println("glup glup glup");
+    }
 }
