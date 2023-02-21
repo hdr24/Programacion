@@ -20,9 +20,9 @@ public class Ejercicio02 {
         }
         int media = suma / n;
         System.out.println();
-        System.out.println(max);
-        System.out.println(min);
-        System.out.println(media);
-        System.out.println(suma);
+        System.out.println("El maximo es: " + max);
+        System.out.println("El minimo es: " + min);
+        System.out.println("La suma es: " + suma);
+        System.out.println("La meida es: "+ media);
     }
 }
