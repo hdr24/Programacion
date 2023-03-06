@@ -1,8 +1,8 @@
-package EjerciciosObjetos.Baraja;
+package Ejercicios10.Ejercicios8_9;
 
 public class Carta {
-    private int numero;
-    private int palo;
+    public int numero;
+    public int palo;
 
     public Carta(int numero, int palo) {
         if (numero > 0 && numero < 11 && palo >= 0 && palo < 4) {
@@ -36,7 +36,7 @@ public class Carta {
     }
 
     public String nombrePalo() {
-        String[] palos = {"oros", "copas", "espadas", "bastos"};
+        String[] palos = {"bastos", "copas", "espadas", "oros"};
         return palos[this.palo];
     }
 

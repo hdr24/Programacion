@@ -1,28 +1,10 @@
-package Ejercicios09.Disco;
+package Ejercicios10.Ejercicio05;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
-
-public class ColeccionDeDiscosPrincipal {
+public class Main {
     public static void main(String[] args) {
-        // N determina el tamaño del array
-        final int N = 4;
-
-        //Crea el array de discos
-        Disco[] discos = new Disco[N];
-
-        // Crea todos los discos que van en cada una de las celdas del array
-        for (int i = 0; i < N; i++) {
-            discos[i] = new Disco();
-        }
-
-        // Carga varios discos
-        discos[0] = new Disco(
-                "GASA41", "Wim Mertens", "Maximazing the Audience", "instrumental", 50);
-        discos[1] = new Disco(
-                "FGHQ64", "Metallica", "Black album", "hard rock", 46);
-        discos[2] = new Disco(
-                "TYUI89", "Supersubmarina", "Viento de cara", "pop rock", 42);
 
         int opcion;
         Scanner s = new Scanner(System.in);
@@ -32,7 +14,14 @@ public class ColeccionDeDiscosPrincipal {
         String generoIntroducido;
         int duracionIntroducida;
         boolean repetido;
-        int vecesImprime = 0;
+        int vecesImprime;
+
+        ArrayList<Disco> discos = new ArrayList<>();
+
+        discos.add(new Disco("GASA48", "Mozart", "Eine Kleine Nachtmusik", "Clasica", 6));
+        discos.add(new Disco("GASA49", "Lady Gaga", "Born this way", "Pop", 53));
+
+        System.out.println("Elija una opcion");
 
         do {
             boolean borrado = false;
@@ -71,10 +60,10 @@ public class ColeccionDeDiscosPrincipal {
 
                             System.out.println("Introduzca el autor");
                             autorIntroducido = s.next();
-                            for (int i = 0; i < N; i++) {
-                                if (!discos[i].getCodigo().equals("LIBRE")) {
-                                    if (discos[i].getAutor().equals(autorIntroducido)) {
-                                        System.out.println(discos[i]);
+                            for (Disco disco : discos) {
+                                if (!disco.getCodigo().equals("LIBRE")) {
+                                    if (disco.getAutor().equals(autorIntroducido)) {
+                                        System.out.println(disco);
                                         vecesImprime++;
                                     }
                                 }
@@ -86,10 +75,10 @@ public class ColeccionDeDiscosPrincipal {
                         case 3 -> {
                             System.out.println("Introduzca el genero");
                             generoIntroducido = s.next();
-                            for (int i = 0; i < N; i++) {
-                                if (!discos[i].getCodigo().equals("LIBRE")) {
-                                    if (discos[i].getGenero().equals(generoIntroducido)) {
-                                        System.out.println(discos[i]);
+                            for (Disco disco : discos) {
+                                if (!disco.getCodigo().equals("LIBRE")) {
+                                    if (disco.getGenero().equals(generoIntroducido)) {
+                                        System.out.println(disco);
                                         vecesImprime++;
                                     }
                                 }
@@ -104,10 +93,10 @@ public class ColeccionDeDiscosPrincipal {
                             System.out.println("Introduzca el final del rango");
                             int finRango = s.nextInt();
 
-                            for (int i = 0; i < N; i++) {
-                                if (!discos[i].getCodigo().equals("LIBRE")) {
-                                    if (discos[i].getDuracion() >= inicRango && discos[i].getDuracion() <= finRango) {
-                                        System.out.println(discos[i]);
+                            for (Disco disco : discos) {
+                                if (!disco.getCodigo().equals("LIBRE")) {
+                                    if (disco.getDuracion() >= inicRango && disco.getDuracion() <= finRango) {
+                                        System.out.println(disco);
                                         vecesImprime++;
                                     }
                                 }
@@ -122,43 +111,33 @@ public class ColeccionDeDiscosPrincipal {
                     System.out.println("\nNUEVO DISCO");
                     System.out.println("===========");
 
-                    // Busca la primera posición libre del array
-                    int primeraLibre = -1;
-                    for (int i = 0; i < N; i++) {
-                        if (discos[i].getCodigo().equals("LIBRE")) {
-                            primeraLibre = i;
-                        }
-                    }
-                    if (primeraLibre != -1) {
-                        System.out.println("Por favor, introduzca los datos del disco.");
-                        System.out.print("Código: ");
-                        do {
-                            repetido = false;
+                    System.out.println("Por favor, introduzca los datos del disco.");
+                    System.out.print("Código: ");
+                    do {
+                        repetido = false;
 
-                            codigoIntroducido = s.next();
+                        codigoIntroducido = s.next();
 
-                            for (int i = 0; i < N; i++) {
-                                if (discos[i].getCodigo().equals(codigoIntroducido)) {
-                                    repetido = true;
-                                    System.out.println("El codigo introducido ya existe");
-                                    System.out.print("Introduzca otro codigo: ");
-                                    break;
-                                }
+                        for (Disco disco : discos) {
+                            if (disco.getCodigo().equals(codigoIntroducido)) {
+                                repetido = true;
+                                System.out.println("El codigo introducido ya existe");
+                                System.out.print("Introduzca otro codigo: ");
+                                break;
                             }
-                        } while (repetido);
+                        }
+                    } while (repetido);
 
-                        System.out.print("Autor: ");
-                        autorIntroducido = s.next();
-                        System.out.print("Título: ");
-                        tituloIntroducido = s.next();
-                        System.out.print("Género: ");
-                        generoIntroducido = s.next();
-                        System.out.print("Duración: ");
-                        duracionIntroducida = s.nextInt();
-                        discos[primeraLibre] = new Disco(codigoIntroducido, autorIntroducido, tituloIntroducido, generoIntroducido, duracionIntroducida);
-                    } else {
-                        System.out.println("La lista de discos está llena, borre un disco antes de introducir otro");
-                    }
+                    System.out.print("Autor: ");
+                    autorIntroducido = s.next();
+                    System.out.print("Título: ");
+                    tituloIntroducido = s.next();
+                    System.out.print("Género: ");
+                    generoIntroducido = s.next();
+                    System.out.print("Duración: ");
+                    duracionIntroducida = s.nextInt();
+                    discos.add(new Disco(codigoIntroducido, autorIntroducido, tituloIntroducido, generoIntroducido, duracionIntroducida));
+
                 }
                 case 3 -> {
                     System.out.println("\nMODIFICAR");
@@ -166,19 +145,20 @@ public class ColeccionDeDiscosPrincipal {
                     System.out.print("Por favor, introduzca el código del disco cuyos datos desea cambiar: ");
                     codigoIntroducido = s.next();
                     int i = -1;
+
                     do {
                         i++;
-                    } while (!((discos[i].getCodigo()).equals(codigoIntroducido)));
+                    } while (!((discos.get(i).getCodigo()).equals(codigoIntroducido)));
                     System.out.println("Introduzca los nuevos datos del disco o INTRO para dejarlos igual.");
-                    System.out.println("Código: " + discos[i].getCodigo());
+                    System.out.println("Código: " + discos.get(i).getCodigo());
                     System.out.print("Nuevo código: ");
                     do {
                         repetido = false;
 
                         codigoIntroducido = s.next();
 
-                        for (int j = 0; j < N; j++) {
-                            if (discos[j].getCodigo().equals(codigoIntroducido)) {
+                        for (Disco disco : discos) {
+                            if (disco.getCodigo().equals(codigoIntroducido)) {
                                 repetido = true;
                                 System.out.println("El codigo introducido ya existe");
                                 System.out.print("Introduzca otro codigo: ");
@@ -187,31 +167,31 @@ public class ColeccionDeDiscosPrincipal {
                         }
                     } while (repetido);
                     if (!codigoIntroducido.equals("")) {
-                        discos[i].setCodigo(codigoIntroducido);
+                        discos.get(i).setCodigo(codigoIntroducido);
                     }
-                    System.out.println("Autor: " + discos[i].getAutor());
+                    System.out.println("Autor: " + discos.get(i).getAutor());
                     System.out.print("Nuevo autor: ");
                     autorIntroducido = s.next();
                     if (!autorIntroducido.equals("")) {
-                        discos[i].setAutor(autorIntroducido);
+                        discos.get(i).setAutor(autorIntroducido);
                     }
-                    System.out.println("Título: " + discos[i].getTitulo());
+                    System.out.println("Título: " + discos.get(i).getTitulo());
                     System.out.print("Nuevo título: ");
                     tituloIntroducido = s.next();
                     if (!tituloIntroducido.equals("")) {
-                        discos[i].setTitulo(tituloIntroducido);
+                        discos.get(i).setTitulo(tituloIntroducido);
                     }
-                    System.out.println("Género: " + discos[i].getGenero());
+                    System.out.println("Género: " + discos.get(i).getGenero());
                     System.out.print("Nuevo género: ");
                     generoIntroducido = s.next();
                     if (!generoIntroducido.equals("")) {
-                        discos[i].setGenero(generoIntroducido);
+                        discos.get(i).setGenero(generoIntroducido);
                     }
-                    System.out.println("Duración: " + discos[i].getDuracion());
+                    System.out.println("Duración: " + discos.get(i).getDuracion());
                     System.out.print("Duración: ");
                     final String duracionIntroducidaString = s.nextLine();
                     if (!duracionIntroducidaString.equals("")) {
-                        discos[i].setDuracion(Integer.parseInt(duracionIntroducidaString));
+                        discos.get(i).setDuracion(Integer.parseInt(duracionIntroducidaString));
                     }
                 }
                 case 4 -> {
@@ -219,9 +199,9 @@ public class ColeccionDeDiscosPrincipal {
                     System.out.println("======");
                     System.out.print("Por favor, introduzca el código del disco que desea borrar: ");
                     codigoIntroducido = s.next();
-                    for (int j = 0; j < N; j++) {
-                        if (discos[j].getCodigo().equals(codigoIntroducido)) {
-                            discos[j].setCodigo("LIBRE");
+                    for (int j = 0; j < discos.size(); j++) {
+                        if (discos.get(j).getCodigo().equals(codigoIntroducido)) {
+                            discos.remove(j);
                             borrado = true;
                             System.out.println("Album borrado con exito");
                             break;

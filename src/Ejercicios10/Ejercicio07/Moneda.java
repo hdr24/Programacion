@@ -5,14 +5,14 @@ package Ejercicios10.Ejercicio07;
 public class Moneda {
 
 
-    public Valor valor;
-    public Pos pos;
-    public enum Valor {
+    private Valor valor;
+    private Pos pos;
+    private enum Valor {
     UN_CENT,DOS_CENT,CINCO_CENT,
         DIEZ_CENT, VEINTICINCO_CENT,
         CINCUENTA_CENT, UN_EURO, DOS_EURO
 }
-    public enum Pos {
+    private enum Pos {
         CARA, CRUZ
     }
 
