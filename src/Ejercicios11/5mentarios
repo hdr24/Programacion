@@ -1,0 +1,32 @@
+ 
+public static void main(String[] args) {
+        int filas;
+        String caracter;
+        Scanner s = new Scanner(System.in);
+        System.out.println("Introduzca la altura: ");
+        filas = s.nextInt();
+        System.out.println("Introduzca un carácter: ");
+        caracter = s.next();
+        for (int i = 1; i <= filas; ++i) {
+            
+            int j = 0;
+            
+            
+            for (int espacios = 1; espacios <= filas - i; ++espacios) {
+                System.out.print("  ");
+            }
+            /*
+            * Finalmente imprimimos el caracter y calculamos cuantas veces lo imprimimos
+            * Mientras que j (las veces que se ha impreso el caracter) sea distinto al número de fila actual
+            * por dos (para que sea una piramide completa) - 1 (para que el número sea impar y se alinee),
+            * imprimiremos el caracter y un espacio para que se alinee
+             */
+            while (j != 2 * i - 1) {
+                System.out.print(caracter + " ");
+                ++j;
+            }
+            
+            System.out.println();
+        }
+    }
+}
